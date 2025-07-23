@@ -1,37 +1,36 @@
 import React, { useEffect, useState } from "react";
 import Button from "@/components/shared/Button";
 
+interface CounterProps {
+  count: number;
+  onDecrement: () => void;
+  onIncrement: () => void;
+}
+
 interface ButtonConfig {
   id: string;
   text: string;
   clickHandler: () => void;
 }
 
-const Counter: React.FC = () => {
-  const [count, setCount] = useState<number>(0); // Count state
+const Counter: React.FC<CounterProps> = ({
+  count,
+  onDecrement,
+  onIncrement,
+}) => {
   const [isAnimating, setIsAnimating] = useState<boolean>(false); // Count animation state
-
-  // Decrement function: decrease count by 1
-  const decrement = (): void => {
-    setCount((prev: number) => prev - 1);
-  };
-
-  // Increment function: increase count by 1
-  const increment = (): void => {
-    setCount((prev: number) => prev + 1);
-  };
 
   // Button configuration
   const buttons: ButtonConfig[] = [
     {
       id: "decrementButton",
       text: "-",
-      clickHandler: decrement, // decrement function
+      clickHandler: onDecrement, // decrement function
     },
     {
       id: "incrementButton",
       text: "+",
-      clickHandler: increment, // increment function
+      clickHandler: onIncrement, // increment function
     },
   ];
 

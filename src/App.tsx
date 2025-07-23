@@ -7,6 +7,10 @@ import logo from "@/public/images/logo.svg";
 import reactLogo from "@/public/images/react.svg";
 import Button from "@/components/shared/Button";
 
+/**
+ * Root App Component
+ */
+
 export function App() {
   const [count, setCount] = useState<number>(0); // Count state
 

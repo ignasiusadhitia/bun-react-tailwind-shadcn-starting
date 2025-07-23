@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from "react";
-import Button from "@/components/shared/Button";
+import Button, { type ButtonVariant } from "@/components/shared/Button";
 
+/**
+ * Props for Counter component
+ */
 interface CounterProps {
   count: number;
   onDecrement: () => void;
@@ -8,13 +11,20 @@ interface CounterProps {
   onIncrement: () => void;
 }
 
+/**
+ * Internal config type for button rendering
+ */
 interface ButtonConfig {
   id: string;
   text: string;
-  variant?: "default" | "outline";
+  variant?: ButtonVariant;
   disabled?: boolean;
   clickHandler: () => void;
 }
+
+/**
+ * Reuseable Counter component
+ */
 
 const Counter: React.FC<CounterProps> = ({
   count,

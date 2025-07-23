@@ -44,7 +44,7 @@ const Button: React.FC<ButtonProps> = ({
       className={`${baseClass} ${variantClass} ${!disabled ? effects : ""}`}
       onClick={onClick}
     >
-      {text}
+      {text.toUpperCase()}
     </button>
   );
 };

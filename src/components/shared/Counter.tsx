@@ -4,18 +4,22 @@ import Button from "@/components/shared/Button";
 interface CounterProps {
   count: number;
   onDecrement: () => void;
+  onReset: () => void;
   onIncrement: () => void;
 }
 
 interface ButtonConfig {
   id: string;
   text: string;
+  variant?: "default" | "outline";
+  disabled?: boolean;
   clickHandler: () => void;
 }
 
 const Counter: React.FC<CounterProps> = ({
   count,
   onDecrement,
+  onReset,
   onIncrement,
 }) => {
   const [isAnimating, setIsAnimating] = useState<boolean>(false); // Count animation state
@@ -26,6 +30,13 @@ const Counter: React.FC<CounterProps> = ({
       id: "decrementButton",
       text: "-",
       clickHandler: onDecrement, // decrement function
+    },
+    {
+      id: "resetButton",
+      text: "reset",
+      variant: "outline",
+      disabled: count === 0,
+      clickHandler: onReset,
     },
     {
       id: "incrementButton",
@@ -59,7 +70,13 @@ const Counter: React.FC<CounterProps> = ({
       <div className="flex gap-2">
         {/* Buttons Group */}
         {buttons.map((item) => (
-          <Button key={item.id} text={item.text} onClick={item.clickHandler} />
+          <Button
+            key={item.id}
+            text={item.text}
+            variant={item.variant}
+            disabled={item.disabled}
+            onClick={item.clickHandler}
+          />
         ))}
       </div>
     </div>

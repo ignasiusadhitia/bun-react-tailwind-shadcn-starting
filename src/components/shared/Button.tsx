@@ -1,8 +1,13 @@
 import React from "react";
 
+export type ButtonVariant = "default" | "outline";
+
+/**
+ * Props for reuseable Button component
+ */
 interface ButtonProps {
   text: string;
-  variant?: "default" | "outline";
+  variant?: ButtonVariant;
   disabled?: boolean;
   onClick: () => void;
 }

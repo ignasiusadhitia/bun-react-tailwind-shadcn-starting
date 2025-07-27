@@ -1,11 +1,11 @@
 import { useState } from "react";
 import { Card, CardContent } from "@/components/ui/card";
-import Counter from "@/components/shared/Counter";
+import Button from "@/components/shared/Button/Button";
+import Counter from "@/components/shared/Counter/Counter";
 import "@/public/styles/globals.css";
 
 import logo from "@/public/images/logo.svg";
 import reactLogo from "@/public/images/react.svg";
-import Button from "@/components/shared/Button";
 
 /**
  * Root App Component

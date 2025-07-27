@@ -1,26 +1,9 @@
 import React, { useEffect, useState } from "react";
-import Button, { type ButtonVariant } from "@/components/shared/Button";
-
-/**
- * Props for Counter component
- */
-interface CounterProps {
-  count: number;
-  onDecrement: () => void;
-  onReset: () => void;
-  onIncrement: () => void;
-}
-
-/**
- * Internal config type for button rendering
- */
-interface ButtonConfig {
-  id: string;
-  text: string;
-  variant?: ButtonVariant;
-  disabled?: boolean;
-  clickHandler: () => void;
-}
+import Button from "@/components/shared/Button/Button";
+import type {
+  CounterButtonConfig,
+  CounterProps,
+} from "@/components/shared/Counter/Counter.types";
 
 /**
  * Reuseable Counter component
@@ -35,7 +18,7 @@ const Counter: React.FC<CounterProps> = ({
   const [isAnimating, setIsAnimating] = useState<boolean>(false); // Count animation state
 
   // Button configuration
-  const buttons: ButtonConfig[] = [
+  const buttons: CounterButtonConfig[] = [
     {
       id: "decrementButton",
       text: "-",

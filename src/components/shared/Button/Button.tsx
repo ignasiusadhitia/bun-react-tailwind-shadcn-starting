@@ -1,16 +1,5 @@
 import React from "react";
-
-export type ButtonVariant = "default" | "outline";
-
-/**
- * Props for reuseable Button component
- */
-interface ButtonProps {
-  text: string;
-  variant?: ButtonVariant;
-  disabled?: boolean;
-  onClick: () => void;
-}
+import type { ButtonProps } from "@/components/shared/Button/Button.types";
 
 const Button: React.FC<ButtonProps> = ({
   text,

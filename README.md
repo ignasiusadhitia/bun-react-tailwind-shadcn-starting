@@ -1,46 +1,36 @@
-<div align='center' id="top">
+<div align='center'>
 
 # Counter App
 
 ![Counter App](/screenshot/counter-screenshot.png)
 
-### Ignasius Yuda Adhitia
+**Ignasius Yuda Adhitia**
 
 A simple interactive counter app built with Bun, React.js, TailwindCSS, and TypeScript.
 
 </div>
 
-<!-- TABLE OF CONTENTS -->
-<details>
-    <summary>Table of Contents</summary>
-    <ol>
-        <li>
-            <a href="#about-the-project">About the Project</a>
-            <ul>
-                <li><a href="#built-with">Built With</a></li>
-            </ul>
-        </li>
-        <li>
-            <a href="#getting-started">Getting Started</a>
-            <ul>
-                <li><a href="#prerequisites">Prerequisites</a></li>
-                <li><a href="#installation">Installation</a></li>
-            </ul>
-        </li>
-        <li><a href="#features">Features</a></li>
-        <li><a href="#project-files-structure">Project Files Structure</a></li>
-        <li><a href="#project-links">Project Links</a></li>
-        <li><a href="#contact">Contact</a></li>
-    </ol>
-</details>
+## Table of Contents
 
-<!-- ABOUT THE PROJECT -->
+- [Counter App](#counter-app)
+  - [Table of Contents](#table-of-contents)
+  - [About The Project](#about-the-project)
+    - [Built With](#built-with)
+  - [Getting Started](#getting-started)
+    - [Prerequisites](#prerequisites)
+    - [Installation](#installation)
+  - [Features](#features)
+  - [Project Files Structure](#project-files-structure)
+  - [Project Links](#project-links)
+  - [Contact](#contact)
+
+---
 
 ## About The Project
 
 This project is a basic interactive counter built as part of a React + Bun + Tailwind practice. It demonstrates clean component structure, animation with TailwindCSS, reusable button components with variants (default, outline, disabled), and proper state management in React.
 
-<p align="right">(<a href="#top">back to top</a>)</p>
+[↑ Back to top](#counter-app)
 
 ### Built With
 
@@ -49,9 +39,7 @@ This project is a basic interactive counter built as part of a React + Bun + Tai
 - [TailwindCSS](https://tailwindcss.com/)
 - [TypeScript](https://www.typescriptlang.org/)
 
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-<!-- GETTING STARTED -->
+[↑ Back to top](#counter-app)
 
 ## Getting Started
 
@@ -103,30 +91,24 @@ Follow these steps to run the project locally:
    bun start
    ```
 
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-<!-- FEATURES -->
+[↑ Back to top](#counter-app)
 
 ## Features
 
-- [x] React counter with increment, decrement, and reset
-- [x] Tailwind-based animation when count updates
-- [x] Reusable `Button` component with variants:
-
+- ✅ React counter with increment, decrement, and reset
+- ✅ Tailwind-based animation when count updates
+- ✅ Reusable `Button` component with variants:
   - Default
   - Outline
   - Disabled
+- ✅ Bun + TypeScript project setup
+- ✅ Clear project structure and state management
 
-- [x] Bun + TypeScript project setup
-- [x] Clear project structure and state management
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-<!-- PROJECT FILES STRUCTURE -->
+[↑ Back to top](#counter-app)
 
 ## Project Files Structure
 
-```ts
+```
 src/
 ├── components/
 │ ├── shared/       // Reuseable component
@@ -154,20 +136,22 @@ src/
 └── main.tsx        // Main entry file for the React application
 ```
 
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-<!-- PROJECT LINKS -->
+[↑ Back to top](#counter-app)
 
 ## Project Links
 
-Project Repo: [https://github.com/ignasiusadhitia/bun-react-tailwind-shadcn-starting/tree/feature/tugas-6](https://github.com/ignasiusadhitia/bun-react-tailwind-shadcn-starting/tree/feature/tugas-6)
+**Project Repo:** [https://github.com/ignasiusadhitia/bun-react-tailwind-shadcn-starting/tree/feature/tugas-6](https://github.com/ignasiusadhitia/bun-react-tailwind-shadcn-starting/tree/feature/tugas-6)
 
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-<!-- CONTACT -->
+[↑ Back to top](#counter-app)
 
 ## Contact
 
-Ignasius Yuda Adhitia - [Github](https://github.com/ignasiusadhitia/) - [Gitlab](https://gitlab.com/ignasiusadhitia/) - [LinkedIn](https://www.linkedin.com/in/ignasiusadhitia/) - [Email](hi@ignasiusadhitia.com) - [Website](www.ignasiusadhitia.com)
+**Ignasius Yuda Adhitia**
 
-<p align="right">(<a href="#top">back to top</a>)</p>
+- [Github](https://github.com/ignasiusadhitia/)
+- [Gitlab](https://gitlab.com/ignasiusadhitia/)
+- [LinkedIn](https://www.linkedin.com/in/ignasiusadhitia/)
+- [Email](mailto:hi@ignasiusadhitia.com)
+- [Website](https://www.ignasiusadhitia.com)
+
+[↑ Back to top](#counter-app)

@@ -107,7 +107,7 @@ export const ProfileCard = ({
           <div className="text-center md:text-left flex-1">
             {/* Name Container */}
             <div className="min-h-[2.5rem] mb-3">
-              <h1
+              <h2
                 className={`
                 text-2xl md:text-3xl font-bold leading-tight text-foreground
                 transition-all duration-500 ease-out
@@ -122,7 +122,7 @@ export const ProfileCard = ({
                 {nameIndex < name.length && (
                   <span className="animate-pulse text-primary ml-1">|</span>
                 )}
-              </h1>
+              </h2>
             </div>
 
             {/* Description */}

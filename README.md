@@ -1,176 +1,149 @@
-<div align='center'>
+<div align="center">
 
-# Profile Card
-
-<div style="display: flex; gap: 20px">
-
-<div>
-
-![Profile Card](/docs/images/desktop-screenshot.png)
-
-</div>
-
-<div>
-
-![Profile Card](/docs/images/mobile-screenshot.png)
-
-</div>
-
-</div>
+# 🚀 React Projects Showcase
 
 **Ignasius Yuda Adhitia**
 
-A responsive profile card built with Bun, React.js, TailwindCSS, shadcn/ui, and TypeScript.
+This repository contains a collection of small projects built with **React.js**, **Bun**, **TailwindCSS**, and **TypeScript** as part of a learning process. Each branch contains a self-contained project demonstrating a specific concept or UI pattern.
 
 </div>
-
-## Table of Contents
-
-- [Profile Card](#profile-card)
-  - [Table of Contents](#table-of-contents)
-  - [About The Project](#about-the-project)
-    - [Built With](#built-with)
-  - [Getting Started](#getting-started)
-    - [Prerequisites](#prerequisites)
-    - [Installation](#installation)
-  - [Features](#features)
-  - [Project Files Structure](#project-files-structure)
-  - [Project Links](#project-links)
-  - [Contact](#contact)
 
 ---
 
-## About The Project
+## 🗂️ Table of Contents
 
-This project is a responsive profile card built as part of a React + Bun + Tailwind + shadcn/ui practice.
+- [🚀 React Projects Showcase](#-react-projects-showcase)
+  - [🗂️ Table of Contents](#️-table-of-contents)
+  - [🧾 About This Repository](#-about-this-repository)
+  - [📌 Projects](#-projects)
+    - [1. Profile Card](#1-profile-card)
+      - [✅ Features](#-features)
+      - [🔧 Built With](#-built-with)
+    - [2. Counter App](#2-counter-app)
+      - [✅ Features](#-features-1)
+      - [🔧 Built With](#-built-with-1)
+  - [📁 File Structure Samples](#-file-structure-samples)
+    - [Profile Card (Branch: `feature/tugas-7`)](#profile-card-branch-featuretugas-7)
+    - [Counter App (Branch: `feature/tugas-6`)](#counter-app-branch-featuretugas-6)
+  - [🔗 Project Links](#-project-links)
+  - [📫 Contact](#-contact)
 
-[↑ Back to top](#profile-card)
+---
 
-### Built With
+## 🧾 About This Repository
 
-- [React.js](https://react.dev/)
-- [Bun](https://bun.sh/)
-- [TailwindCSS](https://tailwindcss.com/)
-- [Shadcn/ui](https://ui.shadcn.com/)
-- [TypeScript](https://www.typescriptlang.org/)
+This repository is a learning playground for building modern React applications using Bun, TailwindCSS, and shadcn/ui. Each project lives in its own branch and explores different aspects of frontend development.
 
-[↑ Back to top](#profile-card)
+---
 
-## Getting Started
+## 📌 Projects
 
-### Prerequisites
+### 1. Profile Card
 
-Make sure you have [Bun](https://bun.sh/) installed.
+> A responsive profile card component with TailwindCSS layout and shadcn/ui elements.
 
-```bash
-powershell -c "irm bun.sh/install.ps1 | iex"
-```
+![Profile Card Desktop](/docs/images/desktop-screenshot.png)
+![Profile Card Mobile](/docs/images/mobile-screenshot.png)
 
-### Installation
+#### ✅ Features
 
-Follow these steps to run the project locally:
+- Responsive layout (mobile & desktop)
+- TypeScript support
+- Reusable UI components via `shadcn/ui`
 
-1. Clone the repository
+#### 🔧 Built With
 
-   ```bash
-   git clone https://github.com/ignasiusadhitia/bun-react-tailwind-shadcn-starting/tree/feature/tugas-7
-   ```
+- React.js
+- Bun
+- TailwindCSS
+- shadcn/ui
+- TypeScript
 
-2. Open the project directory
+---
 
-   ```bash
-   cd profile-card
-   ```
+### 2. Counter App
 
-3. Install dependencies
+> A simple but styled counter with reusable buttons and Tailwind animation.
 
-   ```bash
-   bun install
-   ```
+![Counter App](/screenshot/counter-screenshot.png)
 
-4. Run the project
+#### ✅ Features
 
-   ```bash
-   bun dev
-   ```
+- Increment, decrement, and reset functionality
+- TailwindCSS animation on state change
+- Reusable button components with variants
 
-5. Open your browser and go to:
+#### 🔧 Built With
 
-   ```
-   http://localhost:3000/
-   ```
+- React.js
+- Bun
+- TailwindCSS
+- TypeScript
 
-6. To build and run production:
+---
 
-   ```bash
-   bun start
-   ```
+## 📁 File Structure Samples
 
-[↑ Back to top](#profile-card)
-
-## Features
-
-- ✅ **Responsive design** - Optimum for mobile and desktop screen
-- ✅ **Typescript support** - Full type safety
-- ✅ **shadcn/ui integration** - Consistent design system
-
-[↑ Back to top](#profile-card)
-
-## Project Files Structure
+### Profile Card (Branch: `feature/tugas-7`)
 
 ```
+
 src/
-┣ components/
-┃ ┣ shared/
-┃ ┃ ┣ index.ts
-┃ ┃ ┗ ProfileCard.tsx
-┃ ┗ ui/
-┃   ┣ avatar.tsx
-┃   ┣ button.tsx
-┃   ┣ card.tsx
-┃   ┣ form.tsx
-┃   ┣ input.tsx
-┃   ┣ label.tsx
-┃   ┗ select.tsx
-┣ data/
-┃ ┣ index.ts
-┃ ┣ profile.ts
-┃ ┗ socialMedia.tsx
-┣ interfaces/
-┃ ┣ index.ts
-┃ ┗ profile-card.interface.ts
-┣ lib/
-┃ ┗ utils.ts
-┣ public/
-┃ ┣ images/
-┃ ┃ ┣ logo.svg
-┃ ┃ ┣ profile-image.webp
-┃ ┃ ┗ react.svg
-┃ ┣ styles/
-┃ ┃ ┗ globals.css
-┃ ┗ index.html
-┣ APITester.tsx
-┣ App.tsx
-┣ index.ts
-┗ main.tsx
+├── components/
+│   ├── shared/
+│   │   └── ProfileCard.tsx
+│   └── ui/
+│       ├── avatar.tsx
+│       ├── button.tsx
+│       └── ...
+├── data/
+├── interfaces/
+├── lib/
+├── public/
+│   ├── images/
+│   └── styles/
+├── App.tsx
+├── index.ts
+└── main.tsx
+
 ```
 
-[↑ Back to top](#profile-card)
+### Counter App (Branch: `feature/tugas-6`)
 
-## Project Links
+```
 
-**Project Repo:** [https://github.com/ignasiusadhitia/bun-react-tailwind-shadcn-starting/tree/feature/tugas-7](https://github.com/ignasiusadhitia/bun-react-tailwind-shadcn-starting/tree/feature/tugas-7)
+src/
+├── components/
+│   ├── shared/
+│   │   ├── Button.tsx
+│   │   └── Counter.tsx
+│   └── ui/
+│       ├── button.tsx
+│       └── ...
+├── lib/
+├── public/
+│   ├── images/
+│   └── styles/
+├── App.tsx
+├── index.ts
+└── main.tsx
 
-[↑ Back to top](#profile-card)
+```
 
-## Contact
+---
+
+## 🔗 Project Links
+
+- **Profile Card:** [`feature/tugas-7`](https://github.com/ignasiusadhitia/bun-react-tailwind-shadcn-starting/tree/feature/tugas-7)
+- **Counter App:** [`feature/tugas-6`](https://github.com/ignasiusadhitia/bun-react-tailwind-shadcn-starting/tree/feature/tugas-6)
+
+---
+
+## 📫 Contact
 
 **Ignasius Yuda Adhitia**
 
-- [Github](https://github.com/ignasiusadhitia/)
-- [Gitlab](https://gitlab.com/ignasiusadhitia/)
-- [LinkedIn](https://www.linkedin.com/in/ignasiusadhitia/)
-- [Email](mailto:hi@ignasiusadhitia.com)
-- [Website](https://www.ignasiusadhitia.com)
-
-[↑ Back to top](#profile-card)
+- 🌐 [Website](https://www.ignasiusadhitia.com)
+- 📧 [hi@ignasiusadhitia.com](mailto:hi@ignasiusadhitia.com)
+- 🧑‍💻 [GitHub](https://github.com/ignasiusadhitia)
+- 💼 [LinkedIn](https://www.linkedin.com/in/ignasiusadhitia)

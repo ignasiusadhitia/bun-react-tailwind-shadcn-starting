@@ -20,6 +20,6 @@ declare module "*.webp" {
   /**
    * A path to the WEBP file
    */
-  const path: `${string}.svg`;
+  const path: `${string}.webp`;
   export = path;
 }

@@ -16,15 +16,13 @@ This repository contains a collection of small projects built with **React.js**,
   - [🗂️ Table of Contents](#️-table-of-contents)
   - [🧾 About This Repository](#-about-this-repository)
   - [📌 Projects](#-projects)
-    - [1. Profile Card](#1-profile-card)
+    - [1. Counter App](#1-counter-app)
       - [✅ Features](#-features)
       - [🔧 Built With](#-built-with)
-    - [2. Counter App](#2-counter-app)
+    - [2. Profile Card](#2-profile-card)
       - [✅ Features](#-features-1)
       - [🔧 Built With](#-built-with-1)
-  - [📁 File Structure Samples](#-file-structure-samples)
-    - [Profile Card (Branch: `feature/tugas-7`)](#profile-card-branch-featuretugas-7)
-    - [Counter App (Branch: `feature/tugas-6`)](#counter-app-branch-featuretugas-6)
+  - [📁 File Structure](#-file-structure)
   - [🔗 Project Links](#-project-links)
   - [📫 Contact](#-contact)
 
@@ -38,12 +36,34 @@ This repository is a learning playground for building modern React applications 
 
 ## 📌 Projects
 
-### 1. Profile Card
+### 1. Counter App
+
+> A simple but styled counter with reusable buttons and Tailwind animation.
+
+![Counter App Desktop](/docs/images/counter-app/desktop-screenshot.png)
+![Counter App Desktop](/docs/images/counter-app/mobile-screenshot.png)
+
+#### ✅ Features
+
+- Increment, decrement, and reset functionality
+- TailwindCSS animation on state change
+- Reusable button components with variants
+
+#### 🔧 Built With
+
+- React.js
+- Bun
+- TailwindCSS
+- TypeScript
+
+---
+
+### 2. Profile Card
 
 > A responsive profile card component with TailwindCSS layout and shadcn/ui elements.
 
-![Profile Card Desktop](/docs/images/desktop-screenshot.png)
-![Profile Card Mobile](/docs/images/mobile-screenshot.png)
+![Profile Card Desktop](/docs/images/profile-card/desktop-screenshot.png)
+![Profile Card Mobile](/docs/images/profile-card/mobile-screenshot.png)
 
 #### ✅ Features
 
@@ -61,72 +81,67 @@ This repository is a learning playground for building modern React applications 
 
 ---
 
-### 2. Counter App
-
-> A simple but styled counter with reusable buttons and Tailwind animation.
-
-![Counter App](/screenshot/counter-screenshot.png)
-
-#### ✅ Features
-
-- Increment, decrement, and reset functionality
-- TailwindCSS animation on state change
-- Reusable button components with variants
-
-#### 🔧 Built With
-
-- React.js
-- Bun
-- TailwindCSS
-- TypeScript
-
----
-
-## 📁 File Structure Samples
-
-### Profile Card (Branch: `feature/tugas-7`)
+## 📁 File Structure
 
 ```
 
-src/
-├── components/
-│   ├── shared/
-│   │   └── ProfileCard.tsx
-│   └── ui/
-│       ├── avatar.tsx
-│       ├── button.tsx
-│       └── ...
-├── data/
-├── interfaces/
-├── lib/
-├── public/
-│   ├── images/
-│   └── styles/
-├── App.tsx
-├── index.ts
-└── main.tsx
-
-```
-
-### Counter App (Branch: `feature/tugas-6`)
-
-```
-
-src/
-├── components/
-│   ├── shared/
-│   │   ├── Button.tsx
-│   │   └── Counter.tsx
-│   └── ui/
-│       ├── button.tsx
-│       └── ...
-├── lib/
-├── public/
-│   ├── images/
-│   └── styles/
-├── App.tsx
-├── index.ts
-└── main.tsx
+📦 src/
+├── 📁 components/
+│   ├── 📁 shared/
+│   │   ├── 📁 counter-app/
+│   │   │   ├── 📁 Button/
+│   │   │   │   ├── 📄 Button.tsx
+│   │   │   │   └── 📄 Button.types.ts
+│   │   │   └── 📁 Counter/
+│   │   │       ├── 📄 Counter.tsx
+│   │   │       └── 📄 Counter.types.ts
+│   │   ├── 📁 profile-card/
+│   │   │   └── 📄 ProfileCard.tsx
+│   │   ├── 📄 index.ts
+│   │   └── 📄 ProjectSkeleton.tsx
+│   └── 📁 ui/
+│       ├── 📄 avatar.tsx
+│       ├── 📄 button.tsx
+│       ├── 📄 card.tsx
+│       ├── 📄 form.tsx
+│       ├── 📄 input.tsx
+│       ├── 📄 label.tsx
+│       ├── 📄 scroll-area.tsx
+│       ├── 📄 select.tsx
+│       ├── 📄 separator.tsx
+│       ├── 📄 sheet.tsx
+│       ├── 📄 sidebar.tsx
+│       ├── 📄 skeleton.tsx
+│       └── 📄 tooltip.tsx
+├── 📁 data/
+│   ├── 📄 index.ts
+│   ├── 📄 profile.ts
+│   └── 📄 socialMedia.tsx
+├── 📁 hooks/
+│   └── 📄 use-mobile.ts
+├── 📁 interfaces/
+│   ├── 📄 index.ts
+│   └── 📄 profile-card.interface.ts
+├── 📁 lib/
+│   └── 📄 utils.ts
+├── 📁 projects/
+│   ├── 📄 counter-app.tsx
+│   ├── 📄 index.ts
+│   └── 📄 profile-card.tsx
+├── 📁 public/
+│   ├── 📁 images/
+│   │   ├── 🖼️ logo.svg
+│   │   ├── 🖼️ profile-image.webp
+│   │   └── 🖼️ react.svg
+│   ├── 📁 styles/
+│   │   └── 📄 globals.css
+│   └── 📄 index.html
+├── 📁 types/
+│   └── 📄 common.ts
+├── 📄 APITester.tsx
+├── 📄 App.tsx
+├── 📄 index.ts
+└── 📄 main.tsx
 
 ```
 
@@ -134,8 +149,7 @@ src/
 
 ## 🔗 Project Links
 
-- **Profile Card:** [`feature/tugas-7`](https://github.com/ignasiusadhitia/bun-react-tailwind-shadcn-starting/tree/feature/tugas-7)
-- **Counter App:** [`feature/tugas-6`](https://github.com/ignasiusadhitia/bun-react-tailwind-shadcn-starting/tree/feature/tugas-6)
+[https://github.com/ignasiusadhitia/bun-react-tailwind-shadcn-starting](https://github.com/ignasiusadhitia/bun-react-tailwind-shadcn-starting)
 
 ---
 

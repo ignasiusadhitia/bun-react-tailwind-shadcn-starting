@@ -1,4 +1,3 @@
-// src/projects/projectList.ts
 import { lazy } from "react";
 
 export const projects = [

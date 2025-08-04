@@ -24,7 +24,6 @@ const CounterAppComponent: React.FC = () => {
   return (
     <Card className="w-full mt-8 bg-card/50 backdrop-blur-sm border-muted">
       <CardContent className="pt-6">
-        <h1 className="text-5xl font-bold my-4 leading-tight">Counter</h1>
         {/* Counter */}
         <Counter
           count={count}

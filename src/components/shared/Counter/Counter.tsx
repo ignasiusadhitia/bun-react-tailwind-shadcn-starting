@@ -51,7 +51,7 @@ const Counter: React.FC<CounterProps> = ({
   }, [count]); // Dependency array: effect runs whenever 'count' value changes
 
   return (
-    <div className="p-2 border rounded-xl">
+    <div className="p-2 border rounded-xl text-center">
       {/* Counter Value */}
       <h2
         className={`text-4xl font-bold my-4 leading-tight transition-transform duration-200 ease-out ${

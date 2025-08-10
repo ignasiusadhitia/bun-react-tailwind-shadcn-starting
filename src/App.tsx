@@ -1,70 +1,85 @@
-import { useState } from "react";
-import { Card, CardContent } from "@/components/ui/card";
-import Button from "@/components/shared/Button/Button";
-import Counter from "@/components/shared/Counter/Counter";
+import { projects } from "@/projects";
 import "@/public/styles/globals.css";
-
-import logo from "@/public/images/logo.svg";
-import reactLogo from "@/public/images/react.svg";
-
-/**
- * Root App Component
- */
+import { Suspense, useState } from "react";
+import { Button } from "@/components/ui/button";
+import { ScrollArea } from "@/components/ui/scroll-area";
+import {
+  Sheet,
+  SheetContent,
+  SheetHeader,
+  SheetTrigger,
+} from "@/components/ui/sheet";
+import { Menu } from "lucide-react";
+import { ProjectSkeleton } from "@/components/shared";
 
 export function App() {
-  const [count, setCount] = useState<number>(0); // Count state
+  const [activeProject, setActiveProject] = useState(projects[0]);
 
-  // Decrement function: decrease count by 1
-  const decrement = (): void => {
-    setCount((prev: number) => prev - 1);
-  };
+  const renderProjectButtons = (onSelect?: () => void) => (
+    <div className="space-y-2">
+      {projects.map((project) => (
+        <Button
+          key={project.id}
+          variant={project.id === activeProject.id ? "default" : "ghost"}
+          className="w-full justify-start text-left"
+          onClick={() => {
+            setActiveProject(project);
+            onSelect?.();
+          }}
+        >
+          {project.name}
+        </Button>
+      ))}
+    </div>
+  );
 
-  // Increment function: increase count by 1
-  const increment = (): void => {
-    setCount((prev: number) => prev + 1);
-  };
-
-  // Reset function: set count to 0
-  const reset = (): void => {
-    setCount(0);
-  };
   return (
-    <div className="container mx-auto p-8 text-center relative z-10">
-      <div className="flex justify-center items-center gap-8 mb-8">
-        <img
-          src={logo}
-          alt="Bun Logo"
-          className="h-36 p-6 transition-all duration-300 hover:drop-shadow-[0_0_2em_#646cffaa] scale-120"
-        />
-        <img
-          src={reactLogo}
-          alt="React Logo"
-          className="h-36 p-6 transition-all duration-300 hover:drop-shadow-[0_0_2em_#61dafbaa] [animation:spin_20s_linear_infinite]"
-        />
+    <div className="min-h-screen flex flex-col">
+      {/* Mobile Header */}
+      <header className="md:hidden flex items-center justify-between p-4 border-b">
+        <h1 className="text-xl font-semibold">Projects</h1>
+        <Sheet>
+          <SheetTrigger asChild>
+            <Button variant="outline" size="icon">
+              <Menu className="h-5 w-5" />
+            </Button>
+          </SheetTrigger>
+          <SheetContent side="left">
+            <SheetHeader>
+              <h2 className="text-lg font-medium">Select Project</h2>
+            </SheetHeader>
+            <ScrollArea className="h-[calc(100vh-6rem)] mt-4 pr-2">
+              {renderProjectButtons()}
+            </ScrollArea>
+          </SheetContent>
+        </Sheet>
+      </header>
+
+      {/* Main Layout */}
+      <div className="flex flex-1">
+        {/* Sidebar Desktop */}
+        <aside className="hidden md:flex md:flex-col fixed left-0 w-64 h-screen border-r border-muted bg-background p-4">
+          <h1 className="text-xl font-semibold mb-4">Projects</h1>
+          <ScrollArea className="flex-1 pr-2">
+            {renderProjectButtons()}
+          </ScrollArea>
+        </aside>
+
+        {/* Main Content */}
+        <main className="flex-1 p-6">
+          <section className="border border-muted p-6 rounded-xl bg-card/50">
+            <h2 className="text-5xl font-bold mb-4 leading-tigh">
+              {activeProject.name}
+            </h2>
+            <p className="text-muted-foreground mb-4">
+              {activeProject.description}
+            </p>
+            <Suspense fallback={<ProjectSkeleton />}>
+              <activeProject.component />
+            </Suspense>
+          </section>
+        </main>
       </div>
-
-      <Card className="bg-card/50 backdrop-blur-sm border-muted">
-        <CardContent className="pt-6">
-          <h1 className="text-5xl font-bold my-4 leading-tight">Counter</h1>
-          {/* Counter */}
-          <Counter
-            count={count}
-            onDecrement={decrement}
-            onReset={reset}
-            onIncrement={increment}
-          />
-
-          {/* Reset button from App.jsx*/}
-          <div className="mt-4">
-            <Button
-              text="reset from app"
-              variant="outline"
-              disabled={count === 0}
-              onClick={reset}
-            />
-          </div>
-        </CardContent>
-      </Card>
     </div>
   );
 }

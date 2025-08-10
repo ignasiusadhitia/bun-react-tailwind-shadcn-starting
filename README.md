@@ -1,157 +1,163 @@
-<div align='center'>
+<div align="center">
 
-# Counter App
-
-![Counter App](/screenshot/counter-screenshot.png)
+# 🚀 React Projects Showcase
 
 **Ignasius Yuda Adhitia**
 
-A simple interactive counter app built with Bun, React.js, TailwindCSS, and TypeScript.
+This repository contains a collection of small projects built with **React.js**, **Bun**, **TailwindCSS**, and **TypeScript** as part of a learning process. Each branch contains a self-contained project demonstrating a specific concept or UI pattern.
 
 </div>
 
-## Table of Contents
+---
 
-- [Counter App](#counter-app)
-  - [Table of Contents](#table-of-contents)
-  - [About The Project](#about-the-project)
-    - [Built With](#built-with)
-  - [Getting Started](#getting-started)
-    - [Prerequisites](#prerequisites)
-    - [Installation](#installation)
-  - [Features](#features)
-  - [Project Files Structure](#project-files-structure)
-  - [Project Links](#project-links)
-  - [Contact](#contact)
+## 🗂️ Table of Contents
+
+- [🚀 React Projects Showcase](#-react-projects-showcase)
+  - [🗂️ Table of Contents](#️-table-of-contents)
+  - [🧾 About This Repository](#-about-this-repository)
+  - [📌 Projects](#-projects)
+    - [1. Counter App](#1-counter-app)
+      - [✅ Features](#-features)
+      - [🔧 Built With](#-built-with)
+    - [2. Profile Card](#2-profile-card)
+      - [✅ Features](#-features-1)
+      - [🔧 Built With](#-built-with-1)
+  - [📁 File Structure](#-file-structure)
+  - [🔗 Project Links](#-project-links)
+  - [📫 Contact](#-contact)
 
 ---
 
-## About The Project
+## 🧾 About This Repository
 
-This project is a basic interactive counter built as part of a React + Bun + Tailwind practice. It demonstrates clean component structure, animation with TailwindCSS, reusable button components with variants (default, outline, disabled), and proper state management in React.
+This repository is a learning playground for building modern React applications using Bun, TailwindCSS, and shadcn/ui. Each project lives in its own branch and explores different aspects of frontend development.
 
-[↑ Back to top](#counter-app)
+---
 
-### Built With
+## 📌 Projects
 
-- [React.js](https://react.dev/)
-- [Bun](https://bun.sh/)
-- [TailwindCSS](https://tailwindcss.com/)
-- [TypeScript](https://www.typescriptlang.org/)
+### 1. Counter App
 
-[↑ Back to top](#counter-app)
+> A simple but styled counter with reusable buttons and Tailwind animation.
 
-## Getting Started
+![Counter App Desktop](/docs/images/counter-app/desktop-screenshot.png)
+![Counter App Desktop](/docs/images/counter-app/mobile-screenshot.png)
 
-### Prerequisites
+#### ✅ Features
 
-Make sure you have [Bun](https://bun.sh/) installed.
+- Increment, decrement, and reset functionality
+- TailwindCSS animation on state change
+- Reusable button components with variants
 
-```bash
-powershell -c "irm bun.sh/install.ps1 | iex"
-```
+#### 🔧 Built With
 
-### Installation
+- React.js
+- Bun
+- TailwindCSS
+- TypeScript
 
-Follow these steps to run the project locally:
+---
 
-1. Clone the repository
+### 2. Profile Card
 
-   ```bash
-   git clone https://github.com/ignasiusadhitia/bun-react-tailwind-shadcn-starting/tree/feature/tugas-6
-   ```
+> A responsive profile card component with TailwindCSS layout and shadcn/ui elements.
 
-2. Open the project directory
+![Profile Card Desktop](/docs/images/profile-card/desktop-screenshot.png)
+![Profile Card Mobile](/docs/images/profile-card/mobile-screenshot.png)
 
-   ```bash
-   cd counter-app
-   ```
+#### ✅ Features
 
-3. Install dependencies
+- Responsive layout (mobile & desktop)
+- TypeScript support
+- Reusable UI components via `shadcn/ui`
 
-   ```bash
-   bun install
-   ```
+#### 🔧 Built With
 
-4. Run the project
+- React.js
+- Bun
+- TailwindCSS
+- shadcn/ui
+- TypeScript
 
-   ```bash
-   bun dev
-   ```
+---
 
-5. Open your browser and go to:
-
-   ```
-   http://localhost:3000/
-   ```
-
-6. To build and run production:
-
-   ```bash
-   bun start
-   ```
-
-[↑ Back to top](#counter-app)
-
-## Features
-
-- ✅ React counter with increment, decrement, and reset
-- ✅ Tailwind-based animation when count updates
-- ✅ Reusable `Button` component with variants:
-  - Default
-  - Outline
-  - Disabled
-- ✅ Bun + TypeScript project setup
-- ✅ Clear project structure and state management
-
-[↑ Back to top](#counter-app)
-
-## Project Files Structure
+## 📁 File Structure
 
 ```
-src/
-├── components/
-│ ├── shared/       // Reuseable component
-│ │ ├── Button.tsx
-│ │ └── Counter.tsx
-│ └── ui/       // Shadcn component
-│ ├── button.tsx
-│ ├── card.tsx
-│ ├── form.tsx
-│ ├── input.tsx
-│ ├── label.tsx
-│ └── select.tsx
-├── lib/        // Utility functions
-│ └── utils.ts
-├── public/
-│ ├── images/       // Assets
-│ │ ├── logo.svg
-│ │ └── react.svg
-│ ├── styles/       // Global CSS file
-│ │ └── globals.css
-│ └── index.html        // Main HTML file
-├── APITester.tsx       // API Testing component
-├── App.tsx     // Main application component
-├── index.ts        // Entry point for the application
-└── main.tsx        // Main entry file for the React application
+
+📦 src/
+├── 📁 components/
+│   ├── 📁 shared/
+│   │   ├── 📁 counter-app/
+│   │   │   ├── 📁 Button/
+│   │   │   │   ├── 📄 Button.tsx
+│   │   │   │   └── 📄 Button.types.ts
+│   │   │   └── 📁 Counter/
+│   │   │       ├── 📄 Counter.tsx
+│   │   │       └── 📄 Counter.types.ts
+│   │   ├── 📁 profile-card/
+│   │   │   └── 📄 ProfileCard.tsx
+│   │   ├── 📄 index.ts
+│   │   └── 📄 ProjectSkeleton.tsx
+│   └── 📁 ui/
+│       ├── 📄 avatar.tsx
+│       ├── 📄 button.tsx
+│       ├── 📄 card.tsx
+│       ├── 📄 form.tsx
+│       ├── 📄 input.tsx
+│       ├── 📄 label.tsx
+│       ├── 📄 scroll-area.tsx
+│       ├── 📄 select.tsx
+│       ├── 📄 separator.tsx
+│       ├── 📄 sheet.tsx
+│       ├── 📄 sidebar.tsx
+│       ├── 📄 skeleton.tsx
+│       └── 📄 tooltip.tsx
+├── 📁 data/
+│   ├── 📄 index.ts
+│   ├── 📄 profile.ts
+│   └── 📄 socialMedia.tsx
+├── 📁 hooks/
+│   └── 📄 use-mobile.ts
+├── 📁 interfaces/
+│   ├── 📄 index.ts
+│   └── 📄 profile-card.interface.ts
+├── 📁 lib/
+│   └── 📄 utils.ts
+├── 📁 projects/
+│   ├── 📄 counter-app.tsx
+│   ├── 📄 index.ts
+│   └── 📄 profile-card.tsx
+├── 📁 public/
+│   ├── 📁 images/
+│   │   ├── 🖼️ logo.svg
+│   │   ├── 🖼️ profile-image.webp
+│   │   └── 🖼️ react.svg
+│   ├── 📁 styles/
+│   │   └── 📄 globals.css
+│   └── 📄 index.html
+├── 📁 types/
+│   └── 📄 common.ts
+├── 📄 APITester.tsx
+├── 📄 App.tsx
+├── 📄 index.ts
+└── 📄 main.tsx
+
 ```
 
-[↑ Back to top](#counter-app)
+---
 
-## Project Links
+## 🔗 Project Links
 
-**Project Repo:** [https://github.com/ignasiusadhitia/bun-react-tailwind-shadcn-starting/tree/feature/tugas-6](https://github.com/ignasiusadhitia/bun-react-tailwind-shadcn-starting/tree/feature/tugas-6)
+[https://github.com/ignasiusadhitia/bun-react-tailwind-shadcn-starting](https://github.com/ignasiusadhitia/bun-react-tailwind-shadcn-starting)
 
-[↑ Back to top](#counter-app)
+---
 
-## Contact
+## 📫 Contact
 
 **Ignasius Yuda Adhitia**
 
-- [Github](https://github.com/ignasiusadhitia/)
-- [Gitlab](https://gitlab.com/ignasiusadhitia/)
-- [LinkedIn](https://www.linkedin.com/in/ignasiusadhitia/)
-- [Email](mailto:hi@ignasiusadhitia.com)
-- [Website](https://www.ignasiusadhitia.com)
-
-[↑ Back to top](#counter-app)
+- 🌐 [Website](https://www.ignasiusadhitia.com)
+- 📧 [hi@ignasiusadhitia.com](mailto:hi@ignasiusadhitia.com)
+- 🧑‍💻 [GitHub](https://github.com/ignasiusadhitia)
+- 💼 [LinkedIn](https://www.linkedin.com/in/ignasiusadhitia)

@@ -1,4 +1,4 @@
-import type { ButtonVariant } from "@/components/shared/Button/Button.types";
+import type { ButtonVariant } from "@/components/shared/counter-app/Button/Button.types";
 import type { GenericButtonConfig } from "@/types/common";
 
 /**

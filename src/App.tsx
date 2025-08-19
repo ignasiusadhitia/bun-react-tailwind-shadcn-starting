@@ -9,8 +9,8 @@ import {
   SheetHeader,
   SheetTrigger,
 } from "@/components/ui/sheet";
-import { Menu } from "lucide-react";
 import { ProjectSkeleton } from "@/components/shared";
+import { Menu } from "lucide-react";
 
 export function App() {
   const [activeProject, setActiveProject] = useState(projects[0]);

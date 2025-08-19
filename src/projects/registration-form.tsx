@@ -2,10 +2,9 @@ import React from "react";
 import { RegistrationForm } from "@/components/shared";
 import { Toaster } from "@/components/ui/sonner";
 
-export const RegistrationFormComponent: React.FC = () => {
+const RegistrationFormComponent: React.FC = () => {
   return (
     <>
-      {" "}
       {/* Main Registration Form */}
       <RegistrationForm />
       {/* Toast Container - Sonner from Shadcn UI */}
@@ -24,3 +23,5 @@ export const RegistrationFormComponent: React.FC = () => {
     </>
   );
 };
+
+export default RegistrationFormComponent;

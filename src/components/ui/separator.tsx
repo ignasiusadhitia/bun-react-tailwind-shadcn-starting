@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+=======
+"use client"
+
+>>>>>>> 31c7d07fff6bd8b28c522fad2d92ef0933815b38
 import * as React from "react"
 import * as SeparatorPrimitive from "@radix-ui/react-separator"
 

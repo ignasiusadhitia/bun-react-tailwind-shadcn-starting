@@ -9,10 +9,8 @@ import {
   SheetHeader,
   SheetTrigger,
 } from "@/components/ui/sheet";
-import { RegistrationForm, ProjectSkeleton } from "@/components/shared";
-
+import { ProjectSkeleton } from "@/components/shared";
 import { Menu } from "lucide-react";
-import { Toaster } from "@/components/ui/sonner";
 
 export function App() {
   const [activeProject, setActiveProject] = useState(projects[0]);
@@ -79,23 +77,6 @@ export function App() {
             <Suspense fallback={<ProjectSkeleton />}>
               <activeProject.component />
             </Suspense>
-
-            {/* Main Registration Form */}
-            <RegistrationForm />
-
-            {/* Toast Container - Sonner from Shadcn UI */}
-            <Toaster
-              position="top-right"
-              richColors
-              closeButton
-              toastOptions={{
-                style: {
-                  background: "hsl(var(--background)",
-                  color: "hsl(var(--foreground)",
-                  border: "1px solid hsl(var(--border))",
-                },
-              }}
-            />
           </section>
         </main>
       </div>

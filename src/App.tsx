@@ -33,10 +33,28 @@ export function App() {
     </div>
   );
 
+  // Function to get container class based on project width setting
+  const getContainerClass = (width?: string) => {
+    switch (width) {
+      case "full":
+        return "w-full";
+      case "large":
+        return "w-full max-w-6xl mx-auto";
+      case "medium":
+        return "w-full max-w-4xl mx-auto";
+      case "small":
+        return "w-full max-w-2xl mx-auto";
+      case "narrow":
+        return "w-full max-w-xl mx-auto";
+      default:
+        return "w-full max-w-4xl mx-auto"; // default medium
+    }
+  };
+
   return (
     <div className="min-h-screen flex flex-col">
-      {/* Mobile Header */}
-      <header className="md:hidden flex items-center justify-between p-4 border-b">
+      {/* Mobile Header - Now shown on all screen sizes */}
+      <header className="w-full flex items-center justify-between p-4 border-b bg-background sticky top-0 z-50">
         <h1 className="text-xl font-semibold">Projects</h1>
         <Sheet>
           <SheetTrigger asChild>
@@ -44,7 +62,7 @@ export function App() {
               <Menu className="h-5 w-5" />
             </Button>
           </SheetTrigger>
-          <SheetContent side="left">
+          <SheetContent side="left" className="w-80 sm:w-96">
             <SheetHeader>
               <h2 className="text-lg font-medium">Select Project</h2>
             </SheetHeader>
@@ -55,31 +73,24 @@ export function App() {
         </Sheet>
       </header>
 
-      {/* Main Layout */}
-      <div className="flex flex-1">
-        {/* Sidebar Desktop */}
-        <aside className="hidden md:flex md:flex-col fixed left-0 w-64 h-screen border-r border-muted bg-background p-4">
-          <h1 className="text-xl font-semibold mb-4">Projects</h1>
-          <ScrollArea className="flex-1 pr-2">
-            {renderProjectButtons()}
-          </ScrollArea>
-        </aside>
-
-        {/* Main Content */}
-        <main className="flex-1 p-6">
-          <section className="border border-muted p-6 rounded-xl bg-card/50">
-            <h2 className="text-5xl font-bold mb-4 leading-tigh">
+      {/* Main Content - Full width mobile layout */}
+      <main className="flex-1 p-4 sm:p-6">
+        <div className={getContainerClass(activeProject.width)}>
+          <section className="border border-muted p-4 sm:p-6 rounded-xl bg-card/50">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 leading-tight">
               {activeProject.name}
             </h2>
-            <p className="text-muted-foreground mb-4">
+            <p className="text-muted-foreground mb-4 text-sm sm:text-base">
               {activeProject.description}
             </p>
-            <Suspense fallback={<ProjectSkeleton />}>
-              <activeProject.component />
-            </Suspense>
+            <div className="mt-6">
+              <Suspense fallback={<ProjectSkeleton />}>
+                <activeProject.component />
+              </Suspense>
+            </div>
           </section>
-        </main>
-      </div>
+        </div>
+      </main>
     </div>
   );
 }

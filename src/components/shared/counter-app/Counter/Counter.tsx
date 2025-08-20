@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
-import Button from "@/components/shared/Button/Button";
+import Button from "@/components/shared/counter-app/Button/Button";
 import type {
   CounterButtonConfig,
   CounterProps,
-} from "@/components/shared/Counter/Counter.types";
+} from "@/components/shared/counter-app/Counter/Counter.types";
 
 /**
  * Reuseable Counter component
@@ -54,7 +54,7 @@ const Counter: React.FC<CounterProps> = ({
     <div className="p-2 border rounded-xl text-center">
       {/* Counter Value */}
       <h2
-        className={`text-4xl font-bold my-4 leading-tight transition-transform duration-200 ease-out ${
+        className={`text-4xl text-center font-bold my-4 leading-tight transition-transform duration-200 ease-out ${
           isAnimating ? "scale-110" : "scale-100"
         }`}
       >

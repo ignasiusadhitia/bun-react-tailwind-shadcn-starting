@@ -1,4 +1,4 @@
-import Counter from "@/components/shared/Counter/Counter";
+import Counter from "../counter-app/Counter/Counter";
 import { useCounterStore } from "@/store/counterStore";
 
 export const CounterZustand = () => {

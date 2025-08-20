@@ -10,7 +10,7 @@ export const ThemeToggle: React.FC = () => {
       onClick={toggleTheme}
       variant="outline"
       size="icon"
-      className="fixed top-4 right-4 z-50 shadow-lg border-2 text-gray-900"
+      className="fixed bottom-4 right-4 z-50 shadow-lg border-2 text-gray-900"
     >
       {theme === "light" ? (
         <Moon className="h-4 w-4" />
